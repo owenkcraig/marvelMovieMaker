@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>The Marvel Movie Maker</title>
+	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="makeItRainFiles/makeItRain.css">
+	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700italic|Marvel|Fugaz+One' rel='stylesheet' type='text/css'>	
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="styles/animate.css">
+	<link rel="icon" type="image/png" href="images/Marvel_Favicon.png">
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-73355739-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+	<header>
+		<div class="headerWrapper">
+			<h2>The</h2>
+			<h1>Marvel</h1>
+			<h2>Movie Maker</h2>
+			<a href="#main" class="smoothScroll bounce animated infinite"><i class="fa fa-angle-down"></i></a>
+		</div>
+	</header>
+	<main>
+		<div class="mainWrapper" id="main">
+			<div class="mainIntro">
+				<p>Marvel movies are so hot right now! Seriously, it's like a license to print money! Now you can have the power of a studio exec and put together your own comic book adaptation. It literally doesn't matter which Marvel character you pick, just toss a popular actor in there and get busy counting your millions.</p>
+				<h2>Cast your movie</h2>
+			</div>
+			<div class="generatorMain">
+				<div class="generatorCharacter">
+					<img src="images/questionMark.jpg" alt="Placeholder image" id="characterImage">
+					<h2 class="character" id="character">{ Character }</h2>
+					<button id="characterButton">Pick a character</button>
+				</div>
+				<h2 class="starring" id="starring">starring</h2>
+				<div class="generatorActor">
+					<img src="images/questionMark.jpg" alt="Placeholder image" id="actorImage">
+					<h2 class="actor" id="actor">{ Actor }</h2>
+					<button id="actorButton">Pick an actor</button>
+				</div>
+			</div>
+			<div class="greenlightButton">
+				<button id=button>Greenlight that $hit!</button>
+			</div>
+		</div>
+	</main>
+	<footer>
+		<div class="footerLeft">
+			<h3>Website © <a href = "http://owencraig.ca">Owen Craig</a> 2016</h3>
+			<h3>Make It Rain jQuery plugin by <a href = "http://sarahlesh.com">Sarah Lesh</a></h3>
+		</div>
+		<div class="footerRight">
+			<h3>This product uses data provided by the <a href = "https://www.themoviedb.org/documentation/api">TMDb API</a> and the <a href = "http://developer.marvel.com/">Marvel API</a></h3> 
+			<h3>(© 2014 Marvel) but it is not endorsed or certified by either.</h3>
+			<h3> </h3>
+		</div>
+	</footer>
+
+	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+	<script src="makeItRainFiles/makeItRain.js"></script>
+	<script src="javaScript/script.js"></script>
+	<script type="text/javascript" src="javaScript/smoothscroll.js"></script>
+</body>
+</html>
+
+<!-- Make It Rain jQuery plugin by Sarah Lesh - http://sarahlesh.com/ -->

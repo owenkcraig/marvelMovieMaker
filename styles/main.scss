@@ -1,0 +1,307 @@
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */
+input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+//Variables
+
+$darkRed: #59140b;
+$orangeyRed: #B86600;
+$offWhite: #e6e3d9;
+$offBlack: #030303;
+$dollaBillsGreen: #2c5d0a;
+
+$baseFont: 'Titillium Web', sans-serif;
+$headingsFont: 'Marvel', sans-serif;
+$buttonsFont: 'Fugaz One', cursive;
+
+//Base Styles
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	margin: 0;
+	padding: 0;	
+	overflow-x: hidden;
+}
+
+p, h1, h2, h3 {
+	margin: 0;
+	padding: 0;
+}
+
+p {
+	font-size: 2rem;
+	line-height: 1.7;
+	font-family: $baseFont;
+	color: $offWhite;
+}
+
+h1  {
+	font-family: $headingsFont;
+	color: $offWhite;
+	text-shadow: 1px 1px 1px lighten($offBlack, 20%);
+	font-size: 15rem;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-family: $headingsFont;
+	color: $offBlack;
+	font-size: 4rem;
+	letter-spacing: 3px;
+}
+
+h3 {
+	font-family: $headingsFont;
+	color: $offWhite;
+	font-size: 1.5rem;
+	letter-spacing: 2px;
+}
+
+a {
+	text-decoration: none;
+	color: lighten($dollaBillsGreen, 20%);
+	&:hover, &:focus {
+		text-decoration: underline;
+	}
+}
+
+button {
+	margin: 20px 0 50px 0;
+	font-family: $buttonsFont;
+	letter-spacing: 2px;
+}
+
+img {
+	width: 200px;
+	height: auto;
+}
+
+
+//Page Styles
+
+body {
+	header {
+		height: 100vh;
+		display: flex; 
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		// Gradient
+		background: rgba(169,3,41,1);
+		background: radial-gradient(ellipse at center, rgba(169,3,41,1) 0%, rgba(124,33,29,1) 73%, rgba(72,16,15,1) 100%);
+		//End of gradient
+		text-align: center;
+		.headerWrapper {
+			a {
+				color: $offWhite;
+				font-size: 100px;
+				display: block;
+				padding-top: 50px;
+			}
+		}
+	}
+	main {
+		background-color: $offBlack;
+		position: relative;
+		overflow: hidden;
+		.mainWrapper {
+			max-width: 1080px;
+			margin: 0 auto;
+			.mainIntro {
+				padding: 50px;
+				text-align: center;
+				h2 {
+					color: $offWhite;
+					padding-top: 50px;
+					text-align: center;
+				}
+			}
+			.generatorMain {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				.starring {
+					min-width: 20%;
+					max-width: 12%;
+					color: $orangeyRed;
+					align-self: center;
+					text-align: center;
+				}
+				.generatorCharacter, .generatorActor {
+					min-width: 40%;
+					max-width: 40%;
+					min-height: 200px;
+					text-align: center;
+					img {
+						height: 200px;
+						width: auto;
+						border-right: 4px solid $orangeyRed;
+						border-bottom: 4px solid $orangeyRed;
+					}
+					h2 {
+						color: $offWhite;
+						padding-top: 15px;
+						text-shadow: 1px -1px 1px lighten($dollaBillsGreen, 20%);
+					}
+					button {
+						background: rgba(169,3,41,1);
+						background: radial-gradient(ellipse at center, rgba(184,102,0,1) 0%, rgba(173,96,0,1) 73%, rgba(72,16,15,1) 100%);
+						color: $offWhite;
+						text-transform: uppercase;
+						border: $offBlack;
+						border-radius: 5px;
+						padding: 10px;
+						box-shadow: 0 5px lighten($offBlack, 15%);
+						outline: 0;
+						&:active {
+							box-shadow: 0 3px lighten($offBlack, 15%);
+							transform: translateY(2px);
+						}
+					}
+				}
+			}
+			.greenlightButton {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				button {
+					background: rgba(44,93,10,1);
+					background: linear-gradient(to bottom, rgba(44,93,10,1) 0%, rgba(77,158,19,1) 100%);
+					color: $offBlack;
+					text-transform: uppercase;
+					border: $offBlack;
+					border-radius: 5px;
+					padding: 25px;
+					font-size: 2.5rem;
+					box-shadow: 0 5px lighten($offBlack, 15%);
+					outline: 0;
+					&:active {
+						box-shadow: 0 3px lighten($offBlack, 15%);
+						transform: translateY(2px);
+					}
+				}
+			}
+		}
+	}
+	footer {
+		background-color: $darkRed;
+		display: flex;
+		justify-content: space-between;
+		padding: 15px;
+		line-height: 2;
+		.footerLeft {
+		
+		}
+		.footerRight {
+			text-align: right;
+		}
+	}
+}
+
+// **************************
+//  Responsive
+// **************************
+
+// Landscape phone to portrait table-layout
+@media (max-width: 940px) {
+	body {
+		main {
+			.mainWrapper {
+				.generatorMain {
+					flex-direction: column;
+					align-items: center;
+					.generatorCharacter, .generatorActor {
+						button {
+							margin: 10px 0;
+						}
+					}
+					.starring {
+						padding: 20px 0;
+					}
+				}
+				.greenlightButton {
+					padding: 20px 0;
+				}
+			}
+		}
+		footer {
+			flex-direction: column;	
+			.footerLeft {
+				text-align: center;
+				padding-bottom: 10px;
+			}
+			.footerRight {
+				text-align: center;
+			}
+		}	
+	}
+}
+
+// Landscape phones and down
+@media (max-width: 767px) {
+	body {
+		header {
+			.headerWrapper {
+				h1  {
+					font-size: 12rem;
+				}
+			}
+		}
+		main {
+			.mainWrapper {
+				.mainIntro {
+					p {
+						font-size: 1.8rem;
+					}
+					h2 {
+						font-size: 3.5rem;
+					}
+				}
+				.generatorMain {
+					h2 {
+						font-size: 3.5rem;
+					}
+				}
+			}
+		}
+	}
+}
+
+//Portrait phones and down
+@media (max-width: 480px) {
+	body {
+		header {
+			.headerWrapper {
+				h1  {
+					font-size: 10rem;
+				}
+			}
+		}
+		main {
+			.mainWrapper {
+				.mainIntro {
+					p {
+						font-size: 1.8rem;
+					}
+					h2 {
+						font-size: 3rem;
+					}
+				}
+				.generatorMain {
+					h2 {
+						font-size: 3rem;
+					}
+				}
+			}
+		}
+	}
+}	

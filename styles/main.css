@@ -1,0 +1,417 @@
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block;
+}
+
+audio, canvas, video {
+  display: inline-block;
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+[hidden] {
+  display: none;
+}
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:active, a:hover {
+  outline: 0;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+b, strong {
+  font-weight: 700;
+}
+
+dfn {
+  font-style: italic;
+}
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+pre {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+q {
+  quotes: \201C \201D \2018 \2019;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+img {
+  border: 0;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+button, input {
+  line-height: normal;
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+button[disabled], input[disabled] {
+  cursor: default;
+}
+
+input[type=checkbox], input[type=radio] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type=search] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body, figure {
+  margin: 0;
+}
+
+legend, button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+p, h1, h2, h3 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 1.7;
+  font-family: "Titillium Web", sans-serif;
+  color: #e6e3d9;
+}
+
+h1 {
+  font-family: "Marvel", sans-serif;
+  color: #e6e3d9;
+  text-shadow: 1px 1px 1px #363636;
+  font-size: 15rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: "Marvel", sans-serif;
+  color: #030303;
+  font-size: 4rem;
+  letter-spacing: 3px;
+}
+
+h3 {
+  font-family: "Marvel", sans-serif;
+  color: #e6e3d9;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+}
+
+a {
+  text-decoration: none;
+  color: #58b914;
+}
+
+a:hover, a:focus {
+  text-decoration: underline;
+}
+
+button {
+  margin: 20px 0 50px 0;
+  font-family: "Fugaz One", cursive;
+  letter-spacing: 2px;
+}
+
+img {
+  width: 200px;
+  height: auto;
+}
+
+body header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #a90329;
+  background: radial-gradient(ellipse at center, #a90329 0%, #7c211d 73%, #48100f 100%);
+  text-align: center;
+}
+
+body header .headerWrapper a {
+  color: #e6e3d9;
+  font-size: 100px;
+  display: block;
+  padding-top: 50px;
+}
+
+body main {
+  background-color: #030303;
+  position: relative;
+  overflow: hidden;
+}
+
+body main .mainWrapper {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+body main .mainWrapper .mainIntro {
+  padding: 50px;
+  text-align: center;
+}
+
+body main .mainWrapper .mainIntro h2 {
+  color: #e6e3d9;
+  padding-top: 50px;
+  text-align: center;
+}
+
+body main .mainWrapper .generatorMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+body main .mainWrapper .generatorMain .starring {
+  min-width: 20%;
+  max-width: 12%;
+  color: #B86600;
+  align-self: center;
+  text-align: center;
+}
+
+body main .mainWrapper .generatorMain .generatorCharacter, body main .mainWrapper .generatorMain .generatorActor {
+  min-width: 40%;
+  max-width: 40%;
+  min-height: 200px;
+  text-align: center;
+}
+
+body main .mainWrapper .generatorMain .generatorCharacter img, body main .mainWrapper .generatorMain .generatorActor img {
+  height: 200px;
+  width: auto;
+  border-right: 4px solid #B86600;
+  border-bottom: 4px solid #B86600;
+}
+
+body main .mainWrapper .generatorMain .generatorCharacter h2, body main .mainWrapper .generatorMain .generatorActor h2 {
+  color: #e6e3d9;
+  padding-top: 15px;
+  text-shadow: 1px -1px 1px #58b914;
+}
+
+body main .mainWrapper .generatorMain .generatorCharacter button, body main .mainWrapper .generatorMain .generatorActor button {
+  background: #a90329;
+  background: radial-gradient(ellipse at center, #b86600 0%, #ad6000 73%, #48100f 100%);
+  color: #e6e3d9;
+  text-transform: uppercase;
+  border: #030303;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 5px #292929;
+  outline: 0;
+}
+
+body main .mainWrapper .generatorMain .generatorCharacter button:active, body main .mainWrapper .generatorMain .generatorActor button:active {
+  box-shadow: 0 3px #292929;
+  transform: translateY(2px);
+}
+
+body main .mainWrapper .greenlightButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+body main .mainWrapper .greenlightButton button {
+  background: #2c5d0a;
+  background: linear-gradient(to bottom, #2c5d0a 0%, #4d9e13 100%);
+  color: #030303;
+  text-transform: uppercase;
+  border: #030303;
+  border-radius: 5px;
+  padding: 25px;
+  font-size: 2.5rem;
+  box-shadow: 0 5px #292929;
+  outline: 0;
+}
+
+body main .mainWrapper .greenlightButton button:active {
+  box-shadow: 0 3px #292929;
+  transform: translateY(2px);
+}
+
+body footer {
+  background-color: #59140b;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  line-height: 2;
+}
+
+body footer .footerRight {
+  text-align: right;
+}
+
+@media (max-width: 940px) {
+  body main .mainWrapper .generatorMain {
+    flex-direction: column;
+    align-items: center;
+  }
+  body main .mainWrapper .generatorMain .generatorCharacter button, body main .mainWrapper .generatorMain .generatorActor button {
+    margin: 10px 0;
+  }
+  body main .mainWrapper .generatorMain .starring {
+    padding: 20px 0;
+  }
+  body main .mainWrapper .greenlightButton {
+    padding: 20px 0;
+  }
+  body footer {
+    flex-direction: column;
+  }
+  body footer .footerLeft {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+  body footer .footerRight {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  body header .headerWrapper h1 {
+    font-size: 12rem;
+  }
+  body main .mainWrapper .mainIntro p {
+    font-size: 1.8rem;
+  }
+  body main .mainWrapper .mainIntro h2 {
+    font-size: 3.5rem;
+  }
+  body main .mainWrapper .generatorMain h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body header .headerWrapper h1 {
+    font-size: 10rem;
+  }
+  body main .mainWrapper .mainIntro p {
+    font-size: 1.8rem;
+  }
+  body main .mainWrapper .mainIntro h2 {
+    font-size: 3rem;
+  }
+  body main .mainWrapper .generatorMain h2 {
+    font-size: 3rem;
+  }
+}
