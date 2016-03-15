@@ -5,6 +5,7 @@
 	<title>The Marvel Movie Maker</title>
 	<link rel="stylesheet" href="styles/main.css">
 	<link rel="stylesheet" href="makeItRainFiles/makeItRain.css">
+	<link rel="stylesheet" href="loaders/loaders.css">
 	<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,700italic|Marvel|Fugaz+One' rel='stylesheet' type='text/css'>	
 	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="styles/animate.css">
@@ -38,12 +39,18 @@
 			<div class="generatorMain">
 				<div class="generatorCharacter">
 					<img src="images/questionMark.jpg" alt="Placeholder image" id="characterImage">
+					<div class="characterLoadingScreen" id="characterLoadingScreen">
+						<img src="images/loading.gif" alt="" class="preloader">
+					</div>
 					<h2 class="character" id="character">{ Character }</h2>
 					<button id="characterButton">Pick a character</button>
 				</div>
 				<h2 class="starring" id="starring">starring</h2>
 				<div class="generatorActor">
 					<img src="images/questionMark.jpg" alt="Placeholder image" id="actorImage">
+					<div class="actorLoadingScreen" id="actorLoadingScreen">
+						<img src="images/loading.gif" alt="" class="preloader">
+					</div>
 					<h2 class="actor" id="actor">{ Actor }</h2>
 					<button id="actorButton">Pick an actor</button>
 				</div>
@@ -64,9 +71,11 @@
 			<h3> </h3>
 		</div>
 	</footer>
+	<div class="overlay"></div>
 
 	<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
 	<script src="makeItRainFiles/makeItRain.js"></script>
+	<script src="loaders/loaders.js"></script>
 	<script src="javaScript/script.js"></script>
 	<script type="text/javascript" src="javaScript/smoothscroll.js"></script>
 </body>

@@ -214,7 +214,8 @@ h3 {
 
 a {
   text-decoration: none;
-  color: #58b914;
+  color: #B86600;
+  font-size: 1.7rem;
 }
 
 a:hover, a:focus {
@@ -251,7 +252,7 @@ body header .headerWrapper a {
 }
 
 body main {
-  background-color: #030303;
+  background-color: #242424;
   position: relative;
   overflow: hidden;
 }
@@ -291,6 +292,7 @@ body main .mainWrapper .generatorMain .generatorCharacter, body main .mainWrappe
   max-width: 40%;
   min-height: 200px;
   text-align: center;
+  position: relative;
 }
 
 body main .mainWrapper .generatorMain .generatorCharacter img, body main .mainWrapper .generatorMain .generatorActor img {
@@ -300,10 +302,30 @@ body main .mainWrapper .generatorMain .generatorCharacter img, body main .mainWr
   border-bottom: 4px solid #B86600;
 }
 
+body main .mainWrapper .generatorMain .generatorCharacter .characterLoadingScreen, body main .mainWrapper .generatorMain .generatorCharacter .actorLoadingScreen, body main .mainWrapper .generatorMain .generatorActor .characterLoadingScreen, body main .mainWrapper .generatorMain .generatorActor .actorLoadingScreen {
+  height: 100%;
+  width: 100%;
+  top: -20px;
+  position: absolute;
+  background-color: rgba(3, 3, 3, 0.9);
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+body main .mainWrapper .generatorMain .generatorCharacter .characterLoadingScreen img.preloader, body main .mainWrapper .generatorMain .generatorCharacter .actorLoadingScreen img.preloader, body main .mainWrapper .generatorMain .generatorActor .characterLoadingScreen img.preloader, body main .mainWrapper .generatorMain .generatorActor .actorLoadingScreen img.preloader {
+  height: 125px;
+  width: auto;
+  border: none;
+}
+
+body main .mainWrapper .generatorMain .generatorCharacter .loading, body main .mainWrapper .generatorMain .generatorActor .loading {
+  display: flex;
+}
+
 body main .mainWrapper .generatorMain .generatorCharacter h2, body main .mainWrapper .generatorMain .generatorActor h2 {
   color: #e6e3d9;
   padding-top: 15px;
-  text-shadow: 1px -1px 1px #58b914;
 }
 
 body main .mainWrapper .generatorMain .generatorCharacter button, body main .mainWrapper .generatorMain .generatorActor button {
@@ -367,6 +389,10 @@ body footer .footerRight {
   }
   body main .mainWrapper .generatorMain .generatorCharacter button, body main .mainWrapper .generatorMain .generatorActor button {
     margin: 10px 0;
+  }
+  body main .mainWrapper .generatorMain .generatorCharacter .characterLoadingScreen, body main .mainWrapper .generatorMain .generatorCharacter .actorLoadingScreen, body main .mainWrapper .generatorMain .generatorActor .characterLoadingScreen, body main .mainWrapper .generatorMain .generatorActor .actorLoadingScreen {
+    height: 110%;
+    width: 110%;
   }
   body main .mainWrapper .generatorMain .starring {
     padding: 20px 0;

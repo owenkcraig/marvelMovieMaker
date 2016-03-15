@@ -12,7 +12,9 @@ actorWidget.actorArray = [];
 //Get a randomly generated character
 
 characterWidget.getInfo = function() {
-	var randomCharacterPageDecimal = Math.random() * 1485-19;
+	//show loading screen. Add class show to a loading div
+	$("#characterLoadingScreen").addClass("loading");
+	var randomCharacterPageDecimal = Math.random() * 1485-50;
 	var randomCharacterPageRounded = Math.floor(randomCharacterPageDecimal);
 	$.ajax({
 		url: characterWidget.apiURL,
@@ -23,6 +25,8 @@ characterWidget.getInfo = function() {
 			offset: randomCharacterPageRounded,
 		}
 	}).then(function(response) {
+		//remove loading screen. Remove class show to a loading div
+		$("#characterLoadingScreen").removeClass("loading");
 		var data = response.data.results;
 		var filteredChars = data.filter(function(elem) {
 			return elem.thumbnail.path != "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available";
@@ -41,6 +45,7 @@ characterWidget.getInfo = function() {
 
 //Get a randomly generated actor
 actorWidget.getInfo = function() {
+	$("#actorLoadingScreen").addClass("loading");
 	var randomActorPageDecimal = Math.random() * 100 +1;
 	var randomActorPageRounded = Math.floor(randomActorPageDecimal);
 	$.ajax({
@@ -52,6 +57,7 @@ actorWidget.getInfo = function() {
 			page: randomActorPageRounded,
 		}
 	}).then(function(response) {
+		$("#actorLoadingScreen").removeClass("loading");
 		actorWidget.actorArray = [];
 		for (i = 0; i < response.results.length; i++) {
 			actorWidget.actorArray.push(response.results[i].name);

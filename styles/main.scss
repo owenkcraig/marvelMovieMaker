@@ -11,6 +11,7 @@ $darkRed: #59140b;
 $orangeyRed: #B86600;
 $offWhite: #e6e3d9;
 $offBlack: #030303;
+$grey: #242424;
 $dollaBillsGreen: #2c5d0a;
 
 $baseFont: 'Titillium Web', sans-serif;
@@ -67,7 +68,8 @@ h3 {
 
 a {
 	text-decoration: none;
-	color: lighten($dollaBillsGreen, 20%);
+	color: $orangeyRed;
+	font-size: 1.7rem;
 	&:hover, &:focus {
 		text-decoration: underline;
 	}
@@ -109,7 +111,7 @@ body {
 		}
 	}
 	main {
-		background-color: $offBlack;
+		background-color: $grey;
 		position: relative;
 		overflow: hidden;
 		.mainWrapper {
@@ -140,16 +142,34 @@ body {
 					max-width: 40%;
 					min-height: 200px;
 					text-align: center;
+					position: relative;
 					img {
 						height: 200px;
 						width: auto;
 						border-right: 4px solid $orangeyRed;
 						border-bottom: 4px solid $orangeyRed;
 					}
+					.characterLoadingScreen, .actorLoadingScreen {
+						height: 100%;
+						width: 100%;
+						top: -20px;
+						position: absolute;
+						background-color: rgba(3, 3, 3, 0.9);
+						justify-content: center;
+						align-items: center;
+						display: none;
+						img.preloader {
+							height: 125px;
+							width: auto;
+							border: none;
+						}
+					}
+					.loading {
+						display: flex;
+					}
 					h2 {
 						color: $offWhite;
 						padding-top: 15px;
-						text-shadow: 1px -1px 1px lighten($dollaBillsGreen, 20%);
 					}
 					button {
 						background: rgba(169,3,41,1);
@@ -222,6 +242,10 @@ body {
 					.generatorCharacter, .generatorActor {
 						button {
 							margin: 10px 0;
+						}
+						.characterLoadingScreen, .actorLoadingScreen {
+							height: 110%;
+							width: 110%;
 						}
 					}
 					.starring {
